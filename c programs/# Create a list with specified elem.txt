@@ -1,0 +1,12 @@
+# Create a list with specified elements
+list_1 <- list(seq(-4, 4, length.out = 20), matrix(c(F,T,T,T,T,F,T,T,F,T,F,F), nrow = 3, ncol = 3, byrow = FALSE), c("don", "quixote"), factor(c("LOW", "MED", "LOW", "MED", "MED", "HIGH")))
+
+# Extract row elements 2 and 1 of columns 2 and 3 of the logical matrix
+logical_mat <- list_1[[2]]
+logical_subset <- logical_mat[c(2,1), c(2,3)]
+# Create data frame
+df <- data.frame(person = c("bhavesh", "bhavik", "jonty", "ashi"), sex = c("M", "M", "M", "F"), funny = c(TRUE, FALSE, TRUE, FALSE))
+
+# Append two new records
+df <- rbind(df, data.frame(person = "anshul", sex = "F", funny = TRUE))
+df <- rbind(df, data.frame(person = "raj", sex = "M", funny = FALSE))
